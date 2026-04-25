@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Pink Memory House</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;500;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        blush: '#fff3f8',
+                        roseMilk: '#ffe4ee',
+                        pinkCandy: '#f9b6cc',
+                        pinkPop: '#ff8fb7',
+                        berryRose: '#8b4a63',
+                        deepRose: '#6f3650',
+                        softGlass: 'rgba(255,255,255,0.56)',
+                        softLine: 'rgba(255,183,204,0.42)'
+                    },
+                    fontFamily: {
+                        script: ['"Dancing Script"', 'cursive'],
+                        body: ['"Nunito"', 'sans-serif'],
+                        serif: ['"Cormorant Garamond"', 'serif']
+                    },
+                    boxShadow: {
+                        dreamy: '0 20px 60px rgba(255, 143, 183, 0.18)',
+                        soft: '0 12px 30px rgba(139, 74, 99, 0.10)',
+                        glow: '0 0 35px rgba(255, 179, 204, 0.34)'
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="bg-[radial-gradient(circle_at_top,_#fff9fc_0%,_#fff3f8_32%,_#ffe9f1_68%,_#ffdce8_100%)] text-berryRose overflow-x-hidden min-h-screen">
+    <div class="site-shell">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+
+        <div class="sparkle-layer">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span>
+        </div>
+
+        <main class="relative z-10 max-w-6xl mx-auto px-4 py-6 md:px-6 md:py-8">
+            <!-- Hero -->
+            <section class="hero-board">
+                <div class="hero-copy">
+                    <p class="hero-kicker">my little pink universe</p>
+                    <h1 class="hero-title">Pink Memory House ✨</h1>
+                    <p class="hero-desc">
+                        Một góc nhỏ để viết điều ước, cất giữ quà tặng mong muốn, và lưu lại những kỷ niệm thật đáng yêu theo cách sáng tạo hơn.
+                    </p>
+                </div>
+
+                <div class="hero-stickers">
+                    <div class="sticker sticker-heart">♡</div>
+                    <div class="sticker sticker-star">✦</div>
+                    <div class="sticker sticker-bow">🎀</div>
+                    <div class="sticker sticker-butterfly">🦋</div>
+                </div>
+            </section>
+
+            <!-- Tabs -->
+            <section class="tab-shell">
+                <div class="tab-menu" id="tabMenu">
+                    <button class="tab-btn active" data-tab="wishTab">
+                        <span class="tab-emoji">💌</span>
+                        <span>Wish Studio</span>
+                    </button>
+                    <button class="tab-btn" data-tab="memoryTab">
+                        <span class="tab-emoji">📷</span>
+                        <span>Memory Room</span>
+                    </button>
+                </div>
+
+                <div class="tab-panels">
+                    <!-- TAB 1 -->
+                    <section id="wishTab" class="tab-panel active">
+                        <div class="panel-grid">
+                            <div class="visual-stage">
+                                <div class="floating-card card-a">
+                                    <img src="1.jpg" alt="Lovely memory" />
+                                    <p>cute moment</p>
+                                </div>
+                                <div class="floating-card card-b">
+                                    <img src="2.jpg" alt="Lovely gift" />
+                                    <p>dream gift</p>
+                                </div>
+                                <div class="floating-card card-c">
+                                    <img src="3.jpg" alt="Lovely pink" />
+                                    <p>pink world</p>
+                                </div>
+                            </div>
+
+                            <div class="glass-panel">
+                                <div class="panel-head">
+                                    <p class="panel-subtitle">Wish Studio</p>
+                                    <h2 class="panel-title">Gửi điều ước của bạn</h2>
+                                    <p class="panel-text">
+                                        Viết ra điều bạn mong muốn, món quà bạn thích và dịp đặc biệt muốn được nhớ tới.
+                                    </p>
+                                </div>
+
+                                <form id="wishForm" class="form-stack">
+                                    <div class="input-wrap">
+                                        <input type="text" id="dieu_uoc" name="dieu_uoc" class="cute-input" placeholder=" " required />
+                                        <label for="dieu_uoc">Điều ước của bạn</label>
+                                        <span class="input-badge">✦</span>
+                                    </div>
+
+                                    <div class="input-wrap">
+                                        <input type="text" id="mon_qua" name="mon_qua" class="cute-input" placeholder=" " required />
+                                        <label for="mon_qua">Món quà mong muốn</label>
+                                        <span class="input-badge">🎁</span>
+                                    </div>
+
+                                    <div class="input-wrap">
+                                        <input type="text" id="dip" name="dip" class="cute-input" placeholder=" " required />
+                                        <label for="dip">Vào dịp đặc biệt nào</label>
+                                        <span class="input-badge">♡</span>
+                                    </div>
+
+                                    <button type="submit" id="submitBtn" class="main-btn">
+                                        <span class="main-btn-shine"></span>
+                                        <span class="btn-text">Gửi vào vũ trụ</span>
+                                        <span class="btn-icon">➜</span>
+                                    </button>
+
+                                    <p id="notification" class="notice"></p>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- TAB 2 -->
+                    <section id="memoryTab" class="tab-panel">
+                        <div class="memory-layout">
+                            <div class="glass-panel memory-form-panel">
+                                <div class="panel-head">
+                                    <p class="panel-subtitle">Memory Room</p>
+                                    <h2 class="panel-title">Thêm kỷ niệm mới</h2>
+                                    <p class="panel-text">
+                                        Bạn có thể viết một dòng kỷ niệm, thêm ngày, và gắn ảnh bằng link hoặc chọn ảnh từ máy để xem trước.
+                                    </p>
+                                </div>
+
+                                <form id="memoryForm" class="form-stack">
+                                    <div class="input-wrap">
+                                        <input type="text" id="memoryTitle" class="cute-input" placeholder=" " required />
+                                        <label for="memoryTitle">Tên kỷ niệm</label>
+                                        <span class="input-badge">📌</span>
+                                    </div>
+
+                                    <div class="input-wrap">
+                                        <input type="date" id="memoryDate" class="cute-input cute-date" />
+                                        <label for="memoryDate">Ngày kỷ niệm</label>
+                                        <span class="input-badge">🗓️</span>
+                                    </div>
+
+                                    <div class="input-wrap textarea-wrap">
+                                        <textarea id="memoryDesc" class="cute-textarea" placeholder=" " rows="4" required></textarea>
+                                        <label for="memoryDesc">Viết vài dòng đáng nhớ...</label>
+                                        <span class="input-badge top-badge">💖</span>
+                                    </div>
+
+                                    <div class="input-wrap">
+                                        <input type="url" id="memoryImageUrl" class="cute-input" placeholder=" " />
+                                        <label for="memoryImageUrl">Dán link ảnh kỷ niệm (nếu có)</label>
+                                        <span class="input-badge">🌸</span>
+                                    </div>
+
+                                    <div class="upload-box">
+                                        <label for="memoryImageFile" class="upload-label">
+                                            <span>Chọn ảnh từ máy</span>
+                                            <small>Ảnh này dùng để hiển thị local trên trình duyệt</small>
+                                        </label>
+                                        <input type="file" id="memoryImageFile" accept="image/*" />
+                                    </div>
+
+                                    <div id="imagePreviewBox" class="image-preview-box hidden">
+                                        <img id="imagePreview" alt="Xem trước ảnh kỷ niệm" />
+                                    </div>
+
+                                    <div class="memory-actions">
+                                        <button type="submit" class="main-btn alt-btn">
+                                            <span class="main-btn-shine"></span>
+                                            <span>Thêm vào phòng kỷ niệm</span>
+                                            <span>♡</span>
+                                        </button>
+                                        <button type="button" id="clearMemoriesBtn" class="ghost-btn">
+                                            Xóa tất cả kỷ niệm
+                                        </button>
+                                    </div>
+
+                                    <p id="memoryNotice" class="notice"></p>
+                                </form>
+                            </div>
+
+                            <div class="memory-wall-wrap">
+                                <div class="memory-wall-head">
+                                    <h3>Memory Wall</h3>
+                                    <p>Những mảnh ký ức nhỏ xinh được lưu lại ở đây.</p>
+                                </div>
+
+                                <div id="memoryWall" class="memory-wall">
+                                    <!-- JS render -->
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
